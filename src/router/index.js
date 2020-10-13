@@ -5,9 +5,9 @@ import Cart from "../components/cart/Cart";
 import Collection from "../components/pages/Collection";
 
 const routes = [
-  { path: "Vue-Ecommerce/", component: Home, name: "Home" },
-  { path: "Vue-Ecommerce/cart", component: Cart, name: "Your Shopping Cart" },
-  { path: "Vue-Ecommerce/collection", component: Collection, name: "Collection" },
+  { path: "/", component: Home, name: "Home" },
+  { path: "/cart", component: Cart, name: "Your Shopping Cart" },
+  { path: "/collection", component: Collection, name: "Collection" },
 ];
 
 export default createRouter({
