@@ -16,9 +16,14 @@
 
 <style>
   .collection {
-    height: 80%;
+    height: 90%;
     width: 80%;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
+  }
+  @media only screen and (max-width: 600px) {
+    .collection {
+      height: 100%;
+    }
   }
 </style>

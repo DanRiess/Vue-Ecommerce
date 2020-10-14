@@ -65,4 +65,10 @@
     max-height: 100%;
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 600px) {
+    .all-bags {
+      height: 15%;
+    }
+  }
 </style>

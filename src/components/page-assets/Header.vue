@@ -15,8 +15,7 @@
         <IconBase name="checkout" :width="36" :height="36">
           <ShoppingcartIcon />
         </IconBase>
-        <h2>{{ cartLength }}</h2></router-link
-      >
+        <h2>{{ cartLength }}</h2></router-link>
     </div>
     <div class="menu"></div>
   </div>
@@ -57,6 +56,7 @@
 
 <style scoped>
   .left {
+    height: 100%;
     width: 40%;
     display: flex;
     align-items: center;
@@ -64,16 +64,24 @@
   .logo {
     height: 100%;
     padding-right: 10%;
+    min-width: 40%;
+  }
+  .logo a {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
   .logo img {
-    height: 100%;
+    max-height: 90%;
+    max-width: 90%;
+    height: auto;
     width: auto;
     border-radius: 50%;
     box-shadow: 5px 5px 6px #c4c4c4;
   }
   .divider {
     height: 50%;
-    width: 3px;
+    min-width: 3px;
     background: white;
     box-shadow: 3px 2px 2px rgba(255, 255, 255, 0.486);
   }

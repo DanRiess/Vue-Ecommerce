@@ -8,7 +8,7 @@
         <CartItem :product="product" />
       </template>
       <div class="total" v-show="products.length">
-        <p>Total: {{ total.toLocaleString() }} VND</p>
+        <h3>Total: {{ total.toLocaleString() }} VND</h3>
       </div>
     </div>
     <div class="right">
@@ -75,5 +75,18 @@
     height: 100%;
     background: rgb(12, 34, 41);
     background: radial-gradient(circle, rgba(12, 34, 41, 1) 0%, rgba(54, 67, 71, 1) 100%);
+  }
+
+  @media only screen and (max-width: 600px) {
+    .cart {
+      height: 100%;
+      flex-direction: column;
+    }
+    .left {
+      width: 100%;
+    }
+    .right {
+      width: 100%;
+    }
   }
 </style>

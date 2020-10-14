@@ -7,14 +7,14 @@
       <div class="text-top">
         <div class="text-header">
           <div class="text-name">
-            {{ product.name }}
+            <h2>{{ product.name }}</h2>
           </div>
-          <div class="text-brand">by {{ product.brand }}</div>
+          <div class="text-brand"><p>by {{ product.brand }}</p></div>
         </div>
-        <div class="text-price">{{ product.price.toLocaleString() }} VND</div>
+        <div class="text-price"><h3>{{ product.price.toLocaleString() }} VND</h3></div>
       </div>
       <div class="text-description">
-        {{ product.description }}
+        <p>{{ product.description }}</p>
       </div>
       <div class="button">
         <Button name="Add to cart!" click="add" :products="product" :scale="0.9" />
@@ -81,21 +81,21 @@
     justify-content: space-around;
     height: 40%;
   }
+  .text-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
   .text-name {
     color: white;
-    font-size: 1.5rem;
-    font-weight: 600;
   }
   .text-brand {
     color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
   }
   .text-price {
     color: #5fa8d3;
     text-shadow: 1px 1px 2px black;
-    font-size: 1.5rem;
-    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,5 +111,36 @@
     display: flex;
     justify-content: center;
     height: 20%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .item-container {
+      width: 100%;
+      height: 10rem;
+      flex-direction: row;
+    }
+    .image {
+      width: 40%;
+      height: 100%;
+    }
+    .text {
+      width: 60%;
+      height: 100%;
+    }
+    .text-header {
+      width: 55%;
+    }
+    .text-name h2 {
+      font-size: 1rem;
+    }
+    .text-brand p {
+      font-size: .7rem;
+    }
+    .text-price {
+      width: 45%;
+    }
+    .text-price h3 {
+      font-size: 1rem;
+    }
   }
 </style>

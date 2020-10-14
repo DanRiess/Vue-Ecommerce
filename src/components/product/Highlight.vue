@@ -6,8 +6,8 @@
     <div class="highlight-text">
       <div class="highlight-top">
         <div class="highlight-name">
-          <h1>{{ highlights[0].name }}</h1>
-          <h2>by {{ highlights[0].brand }}</h2>
+          <h2>{{ highlights[0].name }}</h2>
+          <p>by {{ highlights[0].brand }}</p>
         </div>
         <div class="highlight-price">
           <h2>{{ highlights[0].price.toLocaleString() }} VND</h2>
@@ -21,7 +21,7 @@
       </div>
     </div>
   </div>
-</template>
+</template> 
 
 <script>
   import Button from "../page-assets/Button";
@@ -81,5 +81,25 @@
     color: #5fa8d3;
     text-shadow: 1px 1px 2px black;
     width: 30%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .highlight {
+      height: 80%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-around;    
+    }
+    .highlight-image {
+      width: 100%;
+      height: 40%;
+    }
+    .highlight-image img {
+      max-height: 100%;
+    }
+    .highlight-text {
+      width: 100%;
+      height: 55%;
+    }
   }
 </style>

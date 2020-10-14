@@ -3,9 +3,9 @@
     <div class="image">
       <img :src="getImgUrl(product.img)" />
     </div>
-    <div class="name">{{ product.name }}</div>
-    <div class="brand">{{ product.brand }}</div>
-    <div class="price">{{ product.price.toLocaleString() }} VND</div>
+    <div class="name"><p>{{ product.name }}</p></div>
+    <div class="brand"><p>{{ product.brand }}</p></div>
+    <div class="price"><p>{{ product.price.toLocaleString() }} VND</p></div>
   </div>
 </template>
 
